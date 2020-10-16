@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import Navigation from "./Router";
+import Navigation from "./navigation/Router";
 
 function App() {
     return (
