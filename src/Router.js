@@ -10,6 +10,7 @@ import Contact from "./Contact";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import About from "./About";
+import arrowDown from "./img/arrow-down.svg";
 
 export default function Navigation() {
     return (
@@ -32,6 +33,10 @@ export default function Navigation() {
                             </li>
                         </ul>
                     </nav>
+                </div>
+
+                <div className="round-button">
+                    <img src={arrowDown}/>
                 </div>
 
                 {/* A <Switch> looks through its children <Route>s and
