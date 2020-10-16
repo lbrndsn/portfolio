@@ -3,8 +3,9 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
-    NavLink
+    NavLink,
+    useLocation,
+    withRouter
 } from "react-router-dom";
 import Contact from "./Contact";
 import Skills from "./Skills";
@@ -12,28 +13,52 @@ import Projects from "./Projects";
 import About from "./About";
 import arrowDown from "./img/arrow-down.svg";
 
-export default function Navigation() {
+const routes = [
+    {
+        link: "/about",
+        title: "About me",
+    },
+    {
+        link: "/projects",
+        title: "My projects",
+    },
+    {
+        link: "/skills",
+        title: "Skills",
+    },
+    {
+        link: "/contact",
+        title: "Find me",
+    }
+];
+
+const Navbar = withRouter(() => {
+    const location = useLocation();
+    console.log(location);
+
+    const routeLinks = routes.map((route) => (
+        <li>
+            <NavLink to={route.link} activeClassName="selected">{route.title}</NavLink>
+        </li>
+    ));
+
+    return (
+        <div className="nav-container">
+            <nav className="nav">
+                <ul>
+                    { routeLinks }
+                </ul>
+            </nav>
+        </div>
+    )
+});
+
+const Navigation = () => {
+
     return (
         <Router>
             <div>
-                <div className="nav-container">
-                    <nav className="nav">
-                        <ul>
-                            <li>
-                                <NavLink to="/about" activeClassName="selected">About me</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/projects" activeClassName="selected">My projects</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/skills" activeClassName="selected">Skills</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/contact" activeClassName="selected">Find me</NavLink>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                <Navbar/>
 
                 <div className="round-button">
                     <img src={arrowDown}/>
@@ -58,4 +83,6 @@ export default function Navigation() {
             </div>
         </Router>
     );
-}
+};
+
+export default Navigation;
