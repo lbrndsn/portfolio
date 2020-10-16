@@ -1,0 +1,41 @@
+$primary-color: #FF7E00;
+$text-gray: #9B9B9B;
+$font-size-nav: 20px;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+nav {
+  li {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  a {
+    color: $text-gray;
+    text-decoration: none;
+    font-size: $font-size-nav;
+    transition: color 0.15s ease-in;
+  }
+
+  a:hover {
+    color: #717171;
+  }
+
+  .selected {
+    color: $primary-color;
+  }
+
+  .selected:hover {
+    color: $primary-color;
+  }
+}

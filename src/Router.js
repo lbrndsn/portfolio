@@ -3,7 +3,8 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    Link,
+    NavLink
 } from "react-router-dom";
 import Contact from "./Contact";
 import Skills from "./Skills";
@@ -14,19 +15,19 @@ export default function Navigation() {
     return (
         <Router>
             <div>
-                <nav>
+                <nav className="nav">
                     <ul>
                         <li>
-                            <Link to="/about">About me</Link>
+                            <NavLink to="/about" activeClassName="selected">About me</NavLink>
                         </li>
                         <li>
-                            <Link to="/projects">My projects</Link>
+                            <NavLink to="/projects" activeClassName="selected">My projects</NavLink>
                         </li>
                         <li>
-                            <Link to="/skills">Skills</Link>
+                            <NavLink to="/skills" activeClassName="selected">Skills</NavLink>
                         </li>
                         <li>
-                            <Link to="/contact">Find me</Link>
+                            <NavLink to="/contact" activeClassName="selected">Find me</NavLink>
                         </li>
                     </ul>
                 </nav>
