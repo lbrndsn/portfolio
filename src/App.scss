@@ -66,6 +66,11 @@ nav {
   }
 }
 
+::selection {
+  color: white;
+  background-color: $primary-color;;
+}
+
 .round-button {
   display: flex;
   align-items: center;
@@ -83,6 +88,14 @@ nav {
 
 .round-button:hover {
   transform: translateX(33px) translateY(calc(50vh - 33px)) scale(1.1);
+}
+
+.round-button img {
+  transition: all 0.25s ease-in;
+}
+
+.rotated-180 {
+  transform: rotate(180deg);
 }
 
 .fixed {

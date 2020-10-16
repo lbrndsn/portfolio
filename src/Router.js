@@ -5,7 +5,8 @@ import {
     Route,
     NavLink,
     useLocation,
-    withRouter
+    withRouter,
+    useHistory
 } from "react-router-dom";
 import Contact from "./Contact";
 import Skills from "./Skills";
@@ -33,9 +34,6 @@ const routes = [
 ];
 
 const Navbar = withRouter(() => {
-    const location = useLocation();
-    console.log(location);
-
     const routeLinks = routes.map((route) => (
         <li>
             <NavLink to={route.link} activeClassName="selected">{route.title}</NavLink>
@@ -53,19 +51,52 @@ const Navbar = withRouter(() => {
     )
 });
 
+const NavButton = withRouter(() => {
+    const location = useLocation();
+    const history = useHistory();
+
+    const act = () => {
+        const nextRoute = getNextRoute();
+
+        if (!nextRoute) {
+            history.push("/")
+        } else {
+            // Go to next
+            history.push(nextRoute.link);
+        }
+    };
+
+    const getNextRoute = () => {
+        const currentRouteIndex = routes.findIndex((route) => route.link === location.pathname);
+        if (currentRouteIndex === null) {
+            return null;
+        }
+
+        const nextRouteIndex = currentRouteIndex + 1;
+        return routes[nextRouteIndex];
+    };
+
+    const isLastPage = () => {
+        const nextPage = getNextRoute();
+        console.log(nextPage);
+        return !nextPage;
+    };
+
+    return (
+        <div className="round-button" onClick={act}>
+            <img src={arrowDown} className={isLastPage() && "rotated-180"} />
+        </div>
+    );
+});
+
 const Navigation = () => {
 
     return (
         <Router>
             <div>
                 <Navbar/>
+                <NavButton/>
 
-                <div className="round-button">
-                    <img src={arrowDown}/>
-                </div>
-
-                {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
                 <Switch>
                     <Route path="/contact">
                         <Contact/>
