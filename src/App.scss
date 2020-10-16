@@ -1,23 +1,49 @@
 $primary-color: #FF7E00;
 $text-gray: #9B9B9B;
+$background-color: #F6F7F9;
+
+$padding-32: 32px;
+$padding-16: 16px;
+$padding-8: 8px;
+
 $font-size-nav: 20px;
 
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 ul li {
   list-style: none;
 }
 
+.nav-container {
+  background: white;
+  position: fixed;
+  right: 0;
+  height: 100%;
+  width: 20%;
+  padding: 40px;
+}
+
 nav {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
   li {
     text-transform: uppercase;
     font-weight: bold;
+    padding: $padding-16;
   }
 
   a {

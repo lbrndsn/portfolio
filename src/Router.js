@@ -15,37 +15,39 @@ export default function Navigation() {
     return (
         <Router>
             <div>
-                <nav className="nav">
-                    <ul>
-                        <li>
-                            <NavLink to="/about" activeClassName="selected">About me</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/projects" activeClassName="selected">My projects</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/skills" activeClassName="selected">Skills</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/contact" activeClassName="selected">Find me</NavLink>
-                        </li>
-                    </ul>
-                </nav>
+                <div className="nav-container">
+                    <nav className="nav">
+                        <ul>
+                            <li>
+                                <NavLink to="/about" activeClassName="selected">About me</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/projects" activeClassName="selected">My projects</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/skills" activeClassName="selected">Skills</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/contact" activeClassName="selected">Find me</NavLink>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
                 {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
                 <Switch>
                     <Route path="/contact">
-                        <Contact />
+                        <Contact/>
                     </Route>
                     <Route path="/skills">
-                        <Skills />
+                        <Skills/>
                     </Route>
                     <Route path="/projects">
-                        <Projects />
+                        <Projects/>
                     </Route>
                     <Route path="/about">
-                        <About />
+                        <About/>
                     </Route>
                 </Switch>
             </div>
