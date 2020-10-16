@@ -123,8 +123,7 @@ nav {
 }
 
 .fixed {
-  height: 100vh;
-  font-size: 60px;
+  min-height: 100vh;
 }
 
 .page {
@@ -147,6 +146,7 @@ nav {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.2s $cubic-bezier-bounce;
+  width: 250px;
 }
 
 .portrait-picture:hover {

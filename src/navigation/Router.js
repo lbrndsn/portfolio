@@ -3,6 +3,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
+    withRouter
 } from "react-router-dom";
 import Contact from "../pages/Contact";
 import Skills from "../pages/Skills";
@@ -34,6 +35,25 @@ export {
     routes
 }
 
+const Routes = withRouter(() => {
+    return (
+        <Switch>
+            <Route path="/contact">
+                <Contact/>
+            </Route>
+            <Route path="/skills">
+                <Skills/>
+            </Route>
+            <Route path="/projects">
+                <Projects/>
+            </Route>
+            <Route path="/about">
+                <About/>
+            </Route>
+        </Switch>
+    )
+});
+
 const Navigation = () => {
 
     return (
@@ -41,21 +61,7 @@ const Navigation = () => {
             <div>
                 <Navbar/>
                 <NavButton/>
-
-                <Switch>
-                    <Route path="/contact">
-                        <Contact/>
-                    </Route>
-                    <Route path="/skills">
-                        <Skills/>
-                    </Route>
-                    <Route path="/projects">
-                        <Projects/>
-                    </Route>
-                    <Route path="/about">
-                        <About/>
-                    </Route>
-                </Switch>
+                <Routes/>
             </div>
         </Router>
     );
