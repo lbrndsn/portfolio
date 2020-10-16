@@ -8,6 +8,8 @@ $padding-16: 16px;
 $padding-8: 8px;
 $nav-width: 382px;
 
+$cubic-bezier-bounce: cubic-bezier(.05, .53, .42, 1.5);
+
 $font-size-nav: 20px;
 
 body {
@@ -22,6 +24,12 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   color: $text-gray;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: $text-black;
 }
 
 p {
@@ -97,7 +105,7 @@ nav {
   right: $nav-width;
   transform: translateX(33px) translateY(calc(50vh - 33px));
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(.05,.53,.42,1.5);
+  transition: all 0.4s $cubic-bezier-bounce;
 }
 
 .round-button:hover {
@@ -107,7 +115,7 @@ nav {
 
 .round-button img {
   user-select: none;
-  transition: all 0.75s cubic-bezier(.05,.53,.42,1.5);
+  transition: all 0.75s $cubic-bezier-bounce;
 }
 
 .rotated-180 {
@@ -132,5 +140,16 @@ nav {
   margin-left: auto;
   margin-right: auto;
   margin-top: 40vh;
-  padding: 0 $padding-32;
+  padding: 0 $padding-32 100px $padding-32;
+}
+
+.portrait-picture {
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s $cubic-bezier-bounce;
+}
+
+.portrait-picture:hover {
+  box-shadow: 4px 6px 39px -20px rgba(0,0,0,0.75);
+  transform: scale(1.05);
 }

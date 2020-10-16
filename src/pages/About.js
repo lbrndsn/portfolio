@@ -1,4 +1,5 @@
 import React from "react";
+import me from "../img/me.jpg";
 
 const About = () => {
     return (
@@ -12,6 +13,9 @@ const About = () => {
                     getting more skilled in that area. I aspire to find a job in which I can combine interaction design
                     and
                     programming. I also love dogs. 🐕</p>
+
+                <h2>This is me 👇</h2>
+                <img src={me} alt="Picture of me" className="portrait-picture"/>
             </div>
         </div>
     )
