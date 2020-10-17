@@ -150,3 +150,27 @@ nav {
   box-shadow: 4px 6px 39px -20px rgba(0,0,0,0.75);
   transform: scale(1.05);
 }
+
+.contact-buttons {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 200px;
+
+  svg {
+    margin-right: $padding-16;
+    width: 32px;
+    transition: 0.2s $cubic-bezier-bounce;
+  }
+
+  svg path {
+    fill: $text-gray;
+  }
+
+  svg:hover path {
+    fill: $primary-color;
+  }
+
+  svg:hover {
+    transform: scale(1.1);
+  }
+}
