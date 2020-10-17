@@ -8,9 +8,7 @@ const About = observer(({ id }) => {
     const ref = useRef(null);
 
     useEffect(() => {
-        routeStore.setClosure(id, () => {
-            ref.current.scrollIntoView({ behavior: "smooth" });
-        });
+        routeStore[id] = ref;
     }, []);
 
     return (

@@ -1,21 +1,26 @@
 import arrowDown from "../img/arrow-down.svg";
 import React from "react";
 import { routes } from "./Router";
+import {observer} from "mobx-react-lite";
+import {useRouteStore} from "../stores/RouteStore";
 
-const NavButton = () => {
+const NavButton = observer(() => {
+    const routeStore = useRouteStore();
+
     const act = () => {
         const nextRoute = getNextRoute();
 
         if (!nextRoute) {
-            // history.push("/")
+            // Last achieved
+            routeStore.setActive(routes[0].link)
         } else {
             // Go to next
-            // history.push(nextRoute.link);
+            routeStore.setActive(nextRoute.link)
         }
     };
 
     const getNextRoute = () => {
-        const currentRouteIndex = routes.findIndex((route) => route.link === "");
+        const currentRouteIndex = routes.findIndex((route) => route.link === routeStore.activeRoute);
         if (currentRouteIndex === null) {
             return null;
         }
@@ -31,6 +36,6 @@ const NavButton = () => {
             <img src={arrowDown} className={isLastPage() && "rotated-180"} />
         </div>
     );
-};
+});
 
 export default NavButton;

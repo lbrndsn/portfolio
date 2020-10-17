@@ -7,15 +7,13 @@ export const RouteStore = () => {
     const store = useLocalStore(() => ({
         activeRoute: routes[0].link,
         setActive: (route) => {
+            console.log('set active', route);
             store.activeRoute = route;
             // Fire closure
-            const focusOnPage = store[route];
-            if (focusOnPage) {
-                focusOnPage();
+            const ref = store[route];
+            if (ref && ref.current) {
+                ref.current.scrollIntoView({ behavior: "smooth" });
             }
-        },
-        setClosure: (routeId, closure) => {
-            store[routeId] = closure
         },
     }));
 
