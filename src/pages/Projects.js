@@ -14,6 +14,7 @@ const Projects = observer(({ id }) => {
         <div className="fixed page" ref={ref}>
             <div className="page-inner">
                 <h1>Projects</h1>
+                <p>Coming soon 👀</p>
             </div>
         </div>
     )
