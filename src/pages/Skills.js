@@ -7,9 +7,9 @@ const Skills = observer(({ id }) => {
     const ref = useRef(null);
 
     useEffect(() => {
-        routeStore.closure = () => {
+        routeStore.setClosure(id, () => {
             ref.current.scrollIntoView({ behavior: "smooth" });
-        }
+        });
     }, []);
 
     return (

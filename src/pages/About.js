@@ -1,13 +1,20 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import me from "../img/me.jpg";
 import {useRouteStore} from "../stores/RouteStore";
 import {observer} from "mobx-react-lite";
 
 const About = observer(({ id }) => {
     const routeStore = useRouteStore();
+    const ref = useRef(null);
+
+    useEffect(() => {
+        routeStore.setClosure(id, () => {
+            ref.current.scrollIntoView({ behavior: "smooth" });
+        });
+    }, []);
 
     return (
-        <div className="fixed page">
+        <div className="fixed page" ref={ref}>
             <div className="page-inner">
                 <h1>about me</h1>
                 <p>I’m Loïs. I'm an interaction designer living in Arnhem. In my spare time I have a couple of hobbies

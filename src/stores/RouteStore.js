@@ -6,7 +6,17 @@ import {routes} from "../navigation/Router";
 export const RouteStore = () => {
     const store = useLocalStore(() => ({
         activeRoute: routes[0].link,
-        closure: () => null,
+        setActive: (route) => {
+            store.activeRoute = route;
+            // Fire closure
+            const focusOnPage = store[route];
+            if (focusOnPage) {
+                focusOnPage();
+            }
+        },
+        setClosure: (routeId, closure) => {
+            store[routeId] = closure
+        },
     }));
 
     return store;

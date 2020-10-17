@@ -8,7 +8,7 @@ const Navbar = observer(() => {
 
     const routeLinks = routes.map((route) => (
         <li>
-            <a onClick={() => routeStore.closure()} className={routeStore.activeRoute === route.link ? "selected" : null}>{route.title}</a>
+            <a onClick={() => routeStore.setActive(route.link)} className={routeStore.activeRoute === route.link ? "selected" : null}>{route.title}</a>
         </li>
     ));
 
