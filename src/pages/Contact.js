@@ -17,7 +17,7 @@ const Contact = observer(({id}) => {
         <div className="fixed page" ref={ref}>
             <div className="page-inner">
                 <h1>Find me</h1>
-                <h2>Contact me anytime!</h2>
+                <h2>Contact me anytime! 🛎</h2>
                 <p>Seriously, try and call me at 3 AM. On your own risk, of course.</p>
                 <div className="contact-buttons">
 
