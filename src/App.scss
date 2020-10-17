@@ -73,6 +73,7 @@ nav {
     text-decoration: none;
     font-size: $font-size-nav;
     transition: color 0.15s ease-in;
+    cursor: pointer;
   }
 
   a:hover {
@@ -120,10 +121,6 @@ nav {
 
 .rotated-180 {
   transform: rotate(180deg);
-}
-
-.fixed {
-  min-height: 100vh;
 }
 
 .page {

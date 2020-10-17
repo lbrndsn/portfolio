@@ -1,14 +1,14 @@
 import React from "react";
-import {
-    withRouter,
-    NavLink
-} from "react-router-dom";
-import { routes } from "./Router";
+import {routes} from "./Router";
+import {useRouteStore} from "../stores/RouteStore";
+import {observer} from "mobx-react-lite";
 
-const Navbar = withRouter(() => {
+const Navbar = observer(() => {
+    const routeStore = useRouteStore();
+
     const routeLinks = routes.map((route) => (
         <li>
-            <NavLink to={route.link} activeClassName="selected">{route.title}</NavLink>
+            <a onClick={() => routeStore.closure()} className={routeStore.activeRoute === route.link ? "selected" : null}>{route.title}</a>
         </li>
     ));
 
@@ -16,7 +16,7 @@ const Navbar = withRouter(() => {
         <div className="nav-container">
             <nav className="nav">
                 <ul>
-                    { routeLinks }
+                    {routeLinks}
                 </ul>
             </nav>
         </div>

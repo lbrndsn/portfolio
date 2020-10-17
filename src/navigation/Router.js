@@ -1,70 +1,47 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    withRouter
-} from "react-router-dom";
 import Contact from "../pages/Contact";
 import Skills from "../pages/Skills";
 import Projects from "../pages/Projects";
 import About from "../pages/About";
 import NavButton from "./NavButton";
 import Navbar from "./Navbar";
+import {observer} from "mobx-react-lite";
 
-const routes = [
+export const routes = [
     {
         link: "/about",
         title: "About me",
+        renderComponent: (id) => <About key={id} id={id}/>
     },
     {
         link: "/projects",
         title: "My projects",
+        renderComponent: (id) => <Projects key={id} id={id}/>
     },
     {
         link: "/skills",
         title: "Skills",
+        renderComponent: (id) => <Skills key={id} id={id}/>
     },
     {
         link: "/contact",
         title: "Find me",
+        renderComponent: (id) => <Contact key={id} id={id}/>
     }
 ];
 
-export {
-    routes
-}
 
-const Routes = withRouter(() => {
+const Navigation = observer(() => {
     return (
-        <Switch>
-            <Route path="/contact">
-                <Contact/>
-            </Route>
-            <Route path="/skills">
-                <Skills/>
-            </Route>
-            <Route path="/projects">
-                <Projects/>
-            </Route>
-            <Route path="/about">
-                <About/>
-            </Route>
-        </Switch>
-    )
-});
+        <>
+            <Navbar/>
+            <NavButton/>
 
-const Navigation = () => {
-
-    return (
-        <Router>
-            <div>
-                <Navbar/>
-                <NavButton/>
-                <Routes/>
-            </div>
-        </Router>
+            {routes.map(route => (
+                route.renderComponent(route.link)
+            ))}
+        </>
     );
-};
+});
 
 export default Navigation;

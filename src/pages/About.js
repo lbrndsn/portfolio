@@ -1,7 +1,11 @@
 import React from "react";
 import me from "../img/me.jpg";
+import {useRouteStore} from "../stores/RouteStore";
+import {observer} from "mobx-react-lite";
 
-const About = () => {
+const About = observer(({ id }) => {
+    const routeStore = useRouteStore();
+
     return (
         <div className="fixed page">
             <div className="page-inner">
@@ -19,6 +23,6 @@ const About = () => {
             </div>
         </div>
     )
-};
+});
 
 export default About;

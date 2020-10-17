@@ -1,29 +1,21 @@
 import arrowDown from "../img/arrow-down.svg";
 import React from "react";
-import {
-    useLocation,
-    withRouter,
-    useHistory
-} from "react-router-dom";
 import { routes } from "./Router";
 
-const NavButton = withRouter(() => {
-    const location = useLocation();
-    const history = useHistory();
-
+const NavButton = () => {
     const act = () => {
         const nextRoute = getNextRoute();
 
         if (!nextRoute) {
-            history.push("/")
+            // history.push("/")
         } else {
             // Go to next
-            history.push(nextRoute.link);
+            // history.push(nextRoute.link);
         }
     };
 
     const getNextRoute = () => {
-        const currentRouteIndex = routes.findIndex((route) => route.link === location.pathname);
+        const currentRouteIndex = routes.findIndex((route) => route.link === "");
         if (currentRouteIndex === null) {
             return null;
         }
@@ -39,6 +31,6 @@ const NavButton = withRouter(() => {
             <img src={arrowDown} className={isLastPage() && "rotated-180"} />
         </div>
     );
-});
+};
 
 export default NavButton;
