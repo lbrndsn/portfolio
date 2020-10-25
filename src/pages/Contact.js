@@ -18,7 +18,7 @@ const Contact = observer(({id}) => {
             <div className="page-inner">
                 <h1>Find me</h1>
                 <h2>Contact me anytime! 🛎</h2>
-                <p>Seriously, try and call me at 3 AM. On your own risk, of course.</p>
+                <p>Seriously, try and contact me at 3 AM. On your own risk, of course. I probably won't reply until the next morning. But still, feel free to try.</p>
                 <div className="contact-buttons">
 
                     <a href="mailto:me@loisberndsen.nl">

@@ -2,15 +2,14 @@ import React, {useEffect, useRef} from "react";
 import {useRouteStore} from "../stores/RouteStore";
 import {observer} from "mobx-react-lite";
 import Project from "../components/Project";
+import ProjectFlitsmeister1 from "../components/ProjectFlitsmeister1";
 
 const projects = [
     {
         title: 'Flitsmeister Safety Improvements 1 🚙',
         shortDescription: 'During my graduation internship at Flitsmeister I worked on a project individually for the first time. The goal was to “identify the aspects that cause people to perceive Flitsmeister as unsafe and create at least two different proposals that make Flitsmeister safer to use”.',
         tags: ['DESIGN THINKING', 'BRAINSTORMING', 'CO-REFLECTION', 'D;MKFHLJT'],
-        children: (
-            <h2>Some content</h2>
-        )
+        children: <ProjectFlitsmeister1/>
     },
     {
         title: 'Flitsmeister Safety Improvements 2 🚗',

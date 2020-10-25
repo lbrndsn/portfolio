@@ -136,7 +136,7 @@ nav {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40vh;
+  margin-top: 30vh;
   padding: 0 $padding-32 100px $padding-32;
 }
 
@@ -261,21 +261,34 @@ nav {
   transition: all 0.2s ease-in;
 
   .project-open-button {
-    width: 128px;
     text-align: center;
     position: absolute;
     background-color: #EAEAEA;
     color: $text-gray;
-    padding: 12px 16px;
     border-radius: 10px;
     font-weight: 500;
     cursor: pointer;
     font-size: 20px;
     user-select: none;
-    left: calc(-160px - 32px);
+    left: calc(-32px * 3);
     top: 32px;
     text-transform: uppercase;
-    transition: all 0.2s ease-out;
+    transition: all 0.2s ease-in;
+    display: flex;
+    height: 32px;
+    width: 32px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    svg {
+      transition: all 0.2s ease-in;
+      width: 20px;
+    }
+
+    svg:hover path {
+      fill: white;
+    }
   }
 
   .project-open-button:hover {
@@ -286,7 +299,7 @@ nav {
 }
 
 
-@media only screen and (max-width: 667px) {
+@media only screen and (max-width: 1200px) {
   .nav-container {
     display: none;
   }
@@ -319,5 +332,9 @@ nav {
   .round-button:hover {
     transform: scale(1.1);
     user-select: none;
+  }
+
+  .project-open-button {
+    display: none;
   }
 }
