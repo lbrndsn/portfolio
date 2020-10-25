@@ -4,8 +4,12 @@ import {observer} from "mobx-react-lite";
 const Project = observer(({ title, shortDescription, tags, children }) => {
     // const [actualProgress, setProgress] = useState(0);
 
-    const firstTagItems = tags.slice(0, 2).map(tag => <div className="tag">{tag}</div>);
-    const moreTagItems = tags.slice(2, tags.length - 1).map(tag => <div className="tag tag-more">{tag}</div>);
+    let slicePosition = 2;
+    if (tags.length === 3) {
+        slicePosition = 3;
+    }
+    const firstTagItems = tags.slice(0, slicePosition).map(tag => <div className="tag">{tag}</div>);
+    const moreTagItems = tags.slice(slicePosition - 1, tags.length - 1).map(tag => <div className="tag tag-more">{tag}</div>);
 
     return (
         <div className="project-container">
@@ -13,8 +17,9 @@ const Project = observer(({ title, shortDescription, tags, children }) => {
             <p>{shortDescription}</p>
             <div className="tag-container">
                 {firstTagItems}
-                <div className="tag tag-more">{moreTagItems.length} MORE</div>
+                {moreTagItems.length > 0 && <div className="tag tag-more">AND {moreTagItems.length} MORE</div>}
             </div>
+            {children}
         </div>
     )
 });
