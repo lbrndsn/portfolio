@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {observer} from "mobx-react-lite";
+import {CSSTransition} from "react-transition-group";
 
 const Project = observer(({ title, shortDescription, tags, children }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +45,16 @@ const Project = observer(({ title, shortDescription, tags, children }) => {
                 {isOpen ? allTags : notOpenTagView}
             </div>
 
-            {isOpen && children}
+
+            <CSSTransition
+                in={isOpen}
+                timeout={300}
+                classNames="project-content"
+                unmountOnExit
+            >
+                {children}
+            </CSSTransition>
+
         </div>
     )
 });

@@ -254,6 +254,25 @@ nav {
   }
 }
 
+
+.project-content-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.project-content-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.project-content-exit {
+  opacity: 1;
+}
+.project-content-exit-active {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 300ms, transform 300ms;
+}
+
 .project-open-button-container {
   position: sticky;
   top: 100px;
@@ -334,7 +353,9 @@ nav {
     user-select: none;
   }
 
-  .project-open-button {
-    display: none;
+  .project-open-button-container {
+    .project-open-button {
+      display: none;
+    }
   }
 }

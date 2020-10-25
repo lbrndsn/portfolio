@@ -24,7 +24,7 @@ const Contact = observer(({id}) => {
                     <a href="mailto:me@loisberndsen.nl">
                         <svg width="46px" height="35px" viewBox="0 0 46 35" version="1.1"
                              xmlns="http://www.w3.org/2000/svg">
-                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Page-1" stroke="none" fill="none">
                                 <g id="envelope-solid" transform="translate(-394.000000, -724.000000)">
                                     <g transform="translate(394.000000, 724.000000)">
                                         <path
@@ -39,7 +39,7 @@ const Contact = observer(({id}) => {
                     <a href="https://www.linkedin.com/in/loisberndsen/" target="_blank">
                         <svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1"
                              xmlns="http://www.w3.org/2000/svg">
-                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Page-1" stroke="none" fill="none">
                                 <g id="linkedin-in-brands" transform="translate(-316.000000, -712.000000)">
                                     <g transform="translate(316.000000, 712.000000)">
                                         <path
