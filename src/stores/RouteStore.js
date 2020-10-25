@@ -7,7 +7,6 @@ export const RouteStore = () => {
     const store = useLocalStore(() => ({
         activeRoute: routes[0].link,
         setActive: (route) => {
-            console.log('set active', route);
             store.activeRoute = route;
             // Fire closure
             const ref = store[route];

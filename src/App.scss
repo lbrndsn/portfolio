@@ -257,20 +257,60 @@ nav {
 
 .project-content-enter {
   opacity: 0;
-  transform: scale(0.9);
+  max-height: 0px;
 }
 .project-content-enter-active {
   opacity: 1;
-  transform: translateX(0);
-  transition: opacity 300ms, transform 300ms;
+  max-height: 1000px;
+  transition: all 300ms;
 }
 .project-content-exit {
   opacity: 1;
+  max-height: 1000px;
 }
 .project-content-exit-active {
   opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 300ms, transform 300ms;
+  max-height: 0;
+  transition: all 300ms;
+}
+
+.project-open-button-mobile {
+  display: none !important;
+}
+
+.project-open-button {
+  text-align: center;
+  background-color: #EAEAEA;
+  color: $text-gray;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  top: 32px;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in;
+  display: flex;
+  height: 32px;
+  width: 32px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  svg {
+    transition: all 0.2s ease-in;
+    width: 20px;
+  }
+
+  svg:hover path {
+    fill: white;
+  }
+}
+
+.project-open-button:hover {
+  color: white;
+  background-color: $primary-color;
+  transform: scale(1.05);
 }
 
 .project-open-button-container {
@@ -280,40 +320,8 @@ nav {
   transition: all 0.2s ease-in;
 
   .project-open-button {
-    text-align: center;
     position: absolute;
-    background-color: #EAEAEA;
-    color: $text-gray;
-    border-radius: 10px;
-    font-weight: 500;
-    cursor: pointer;
-    font-size: 20px;
-    user-select: none;
     left: calc(-32px * 3);
-    top: 32px;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in;
-    display: flex;
-    height: 32px;
-    width: 32px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-
-    svg {
-      transition: all 0.2s ease-in;
-      width: 20px;
-    }
-
-    svg:hover path {
-      fill: white;
-    }
-  }
-
-  .project-open-button:hover {
-    color: white;
-    background-color: $primary-color;
-    transform: scale(1.05);
   }
 }
 
@@ -357,5 +365,10 @@ nav {
     .project-open-button {
       display: none;
     }
+  }
+
+  .project-open-button-mobile {
+    display: inline-flex !important;
+    margin-bottom: $padding-16;
   }
 }
