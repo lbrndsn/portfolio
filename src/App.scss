@@ -222,6 +222,24 @@ nav {
   list-style: inherit;
 }
 
+.tag-container {
+  display: flex;
+}
+
+.tag {
+  background-color: $primary-color;
+  color: white;
+  padding: 7px 18px;
+  border-radius: 15px;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.tag-more {
+  background-color: #DADAE2;
+  color: #585858;
+}
+
 @media only screen and (max-width: 667px) {
   .nav-container {
     display: none;

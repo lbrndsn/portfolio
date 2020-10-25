@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from "react";
 import {useRouteStore} from "../stores/RouteStore";
 import {observer} from "mobx-react-lite";
-import SkillBar from "../SkillBar";
+import SkillBar from "../components/SkillBar";
 
 
 const skillsDesign = [
