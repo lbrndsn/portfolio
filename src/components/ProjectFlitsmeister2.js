@@ -1,5 +1,5 @@
 import React from 'react';
-import someImage from '../img/cultural-probes.jpg';
+import someImage from '../img/cultural-probes.png';
 import anotherImage from '../img/persona-michel.png';
 
 const ProjectFlitsmeister2 = () => {
