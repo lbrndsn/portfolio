@@ -1,6 +1,6 @@
 
 import React from 'react';
-import someImage from '../img/me.jpg';
+import someImage from '../img/the art of waiting.png';
 
 const ProjectTheArtOfWaiting = () => {
     return (

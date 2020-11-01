@@ -1,5 +1,5 @@
 import React from 'react';
-import someImage from '../img/me.jpg';
+import someImage from '../img/mockup-dashboard-workload-robin sml.png';
 
 const ProjectRobin3 = () => {
     return (
