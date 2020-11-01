@@ -3,6 +3,7 @@ import Contact from "../pages/Contact";
 import Skills from "../pages/Skills";
 import Projects from "../pages/Projects";
 import About from "../pages/About";
+import Splash from "../pages/Splash";
 import NavButton from "./NavButton";
 import Navbar from "./Navbar";
 import {observer} from "mobx-react-lite";
@@ -61,6 +62,7 @@ const Navigation = observer(() => {
             <Navbar/>
             <NavButton/>
 
+            <Splash/>
             {routes.map(route => (
                 route.renderComponent(route.link)
             ))}
