@@ -75,9 +75,6 @@ const Skills = observer(({id}) => {
                     <li>
                         learn node.js
                     </li>
-                    <li>
-                        learn adobe illustrator
-                    </li>
                 </ul>
             </div>
         </div>

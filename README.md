@@ -4,7 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 `npm start`
 
-# 
+# How to upload to the internet
+
+1. Run `npm run build`
+2. Go to vimexx, website ding
+
 
 In the project directory, you can run:
 

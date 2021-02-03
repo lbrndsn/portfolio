@@ -10,9 +10,9 @@ const SkillBar = observer(({ title, progress }) => {
     return (
         <div className="skill-bar-container">
             <div className="skill-bar-title">{title}</div>
-            <div className="skill-bar-outer">
+            {/* <div className="skill-bar-outer">
                 <div className="skill-bar-inner" style={{ width: actualProgress + "%" }}/>
-            </div>
+            </div> */}
         </div>
     )
 });
