@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.18d49a4d.chunk.css",
+    "main.js": "/static/js/main.82da3ffc.chunk.js",
+    "main.js.map": "/static/js/main.82da3ffc.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.8ceb049b.chunk.js": "/static/js/2.8ceb049b.chunk.js",
+    "static/js/2.8ceb049b.chunk.js.map": "/static/js/2.8ceb049b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.4db3b268af122a6064feb82187b8875c.js": "/precache-manifest.4db3b268af122a6064feb82187b8875c.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.18d49a4d.chunk.css.map": "/static/css/main.18d49a4d.chunk.css.map",
+    "static/media/arrow-down.svg": "/static/media/arrow-down.3efc9d52.svg",
+    "static/media/cultural-probes.png": "/static/media/cultural-probes.5d413dc0.png",
+    "static/media/dashboard-1 sml.png": "/static/media/dashboard-1 sml.355f102d.png",
+    "static/media/empathy-map.jpg": "/static/media/empathy-map.0758f5c4.jpg",
+    "static/media/envelope-solid.svg": "/static/media/envelope-solid.25bddb4d.svg",
+    "static/media/friend-or-foe.png": "/static/media/friend-or-foe.a2a8dfa5.png",
+    "static/media/ica-presents.jpg": "/static/media/ica-presents.4e4aaacf.jpg",
+    "static/media/infographic-robin.png": "/static/media/infographic-robin.07e868d0.png",
+    "static/media/linked-in.svg": "/static/media/linked-in.3720f0d2.svg",
+    "static/media/me.jpg": "/static/media/me.b78fcc65.jpg",
+    "static/media/mockup-dashboard-workload-robin sml.png": "/static/media/mockup-dashboard-workload-robin sml.d2dc28ce.png",
+    "static/media/persona-michel.png": "/static/media/persona-michel.6e994bc4.png",
+    "static/media/spacex2.jpg": "/static/media/spacex2.057a219e.jpg",
+    "static/media/the art of waiting.png": "/static/media/the art of waiting.75c6d2f2.png",
+    "static/media/weightables.png": "/static/media/weightables.06251b78.png",
+    "static/media/wintersport-rev-robin.png": "/static/media/wintersport-rev-robin.c61eea0e.png"
+  }
+}
