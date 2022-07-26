@@ -6,22 +6,20 @@ import SkillBar from "../components/SkillBar";
 
 const skillsDesign = [
     { title: "Figma", progress: 80 },
-    { title: "Sketch", progress: 70 },
     { title: "Adobe Indesign", progress: 60 },
     { title: "Adobe Photoshop", progress: 40 },
+    { title: "Adobe Illustrator", progress: 40 },
 ];
 
 const skillsPrototyping = [
     { title: "Figma", progress: 70 },
     { title: "Adobe XD", progress: 70 },
-    { title: "Protopie", progress: 70 },
 ];
 
 const skillsProgramming = [
     { title: "HTML/CSS/SASS", progress: 60 },
     { title: "JavaScript", progress: 40 },
-    { title: "React", progress: 35 },
-    { title: "Arduino", progress: 35 },
+    { title: "Swift", progress: 35 },
 ];
 
 const Skills = observer(({id}) => {
@@ -67,13 +65,10 @@ const Skills = observer(({id}) => {
                 </p>
                 <ul className="goals-list">
                     <li>
-                        get better at programming
+                        use my interaction design skills
                     </li>
                     <li>
-                        learn swift
-                    </li>
-                    <li>
-                        learn node.js
+                        explore other creative outlets
                     </li>
                 </ul>
             </div>
