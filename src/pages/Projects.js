@@ -16,13 +16,13 @@ import ProjectWeightables from "../components/ProjectWeightables";
 
 const projects = [
     {
-        title: 'Flitsmeister Safety Improvements 1 🚙',
+        title: 'Flitsmeister Safety Improvements 1',
         shortDescription: 'During my graduation internship at Flitsmeister I worked on a project individually for the first time. The goal was to “identify the aspects that cause people to perceive Flitsmeister as unsafe and create at least two different proposals that make Flitsmeister safer to use”.',
         tags: ['DESIGN THINKING', 'BENCHMARK STUDY', 'PEER REVIEW', 'CO-REFLECTION', 'PARTICIPANT OBSERVATION', '(EXPERT-)INTERVIEW', 'SURVEY', 'LITERATURE STUDY', 'REQUIREMENT LIST', 'EMPATHY MAP', 'CUSTOMER JOURNEY', 'SERVICE BLUEPRINT', 'DOT VOTING', 'SKETCHING', 'PROTOTYPING', 'THINKING ALOUD', 'FIELD TRIAL', 'USABILITY TESTING', 'WIZARD OF OZ', 'SCENARIOS', 'BRAINWRITING', '5 WHYS', 'MIND MAPPING', 'REVERSE BRAINSTORMING', 'FIGMA', 'TYPEFORM', 'SKYPE', 'DISCORD'],
         children: <ProjectFlitsmeister1/>
     },
     {
-        title: 'Flitsmeister Safety Improvements 2 🚗',
+        title: 'Flitsmeister Safety Improvements 2',
         shortDescription: 'The second time I worked on a project individually at Flitsmeister, the goal was to “make clear in what way the service that Flitsmeister offers can give people a feeling of safety before, during and after their trip".',
         tags: ['SERVICE DESIGN THINKING', 'PERSONA', 'CO-REFLECTION', 'PEER REVIEW', 'CULTURAL PROBES', 'LITERATURE STUDY', 'INTERVIEW', 'INSPIRATION WALL', 'MOODBOARD', 'EMPATHY MAP', 'CUSTOMER JOURNEY', 'SKETCHING', 'PROTOTYPING', 'THINKING ALOUD', 'FIELD TRIAL', 'USABILITY TESTING', 'A/B TESTING', 'SCENARIOS', 'USER FLOWS', 'LOTUS BLOSSOM', 'CRAZY 8S', 'MIND MAPPING', 'FIGMA', 'SKYPE', 'DISCORD'],
         children: <ProjectFlitsmeister2/>

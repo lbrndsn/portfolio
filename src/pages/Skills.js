@@ -6,13 +6,14 @@ import SkillBar from "../components/SkillBar";
 
 const skillsDesign = [
     { title: "Figma", progress: 80 },
+    { title: "Sketch", progress: 80 },
     { title: "Adobe Indesign", progress: 60 },
     { title: "Adobe Photoshop", progress: 40 },
-    { title: "Adobe Illustrator", progress: 40 },
 ];
 
 const skillsPrototyping = [
     { title: "Figma", progress: 70 },
+    { title: "Sketch", progress: 90 },
     { title: "Adobe XD", progress: 70 },
 ];
 
@@ -59,18 +60,6 @@ const Skills = observer(({id}) => {
                     {skillBarsProgramming}
                 </div>
 
-                <h2>Goals 🥅</h2>
-                <p>
-                    At the moment I would like to:
-                </p>
-                <ul className="goals-list">
-                    <li>
-                        use my interaction design skills
-                    </li>
-                    <li>
-                        explore other creative outlets
-                    </li>
-                </ul>
             </div>
         </div>
     )
