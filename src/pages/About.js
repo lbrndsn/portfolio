@@ -16,7 +16,7 @@ const About = observer(({ id }) => {
             <div className="page-inner">
                 <h1>about me</h1>
                 <p>
-                I’m Loïs. I'm an interaction designer living in Arnhem. In my spare time I have a couple of hobbies which include writing, drawing, traveling and cooking. I enjoy nature, being outside and learning new skills, whatever it may be. I aspire to find a job in which I can use my creativity in different ways. I also love dogs. And my cat. Of course.
+                I’m Loïs. I'm an interaction designer living in Arnhem. In my spare time I have a couple of hobbies which include writing, drawing, jewelry making, traveling and cooking. I enjoy nature, being outside and learning new skills, whatever it may be. I aspire to find a job in which I can use my creativity in different ways. I also love dogs. And my cat. Of course.
                 </p>
                 <h2>This is me 👇</h2>
                 <img src={me} alt="Picture of me" className="portrait-picture"/>
